@@ -44,13 +44,34 @@ and open the template in the editor.
                 //Arreglos
                 $Array1=[2,'pollo',4];
                 echo '<br></br>'.$Array1[0];
+                //arreglos de otra forma
+                $variable=array('hi',3,'pol');   
             ?>
         </h1>
         <p>
-            <h2>
+            <h2>     
+                <pre>
                 <?php
+                //Mostrar informacion de un arreglo de forma ordenada
                 echo'esta es otra seccion';
+                print_r($variable); 
+                echo '<br></br>';
+                //Agregar datos a un array
+                $variable[]='Phyton';
+                //Mostrar usando var_dump
+                var_dump($variable);
+                //Funciones para trabajo con arreglos
+                //quitar ultimo elemento de array
+                $dato= array_pop($variable);
+                echo '<br></br>';
+                print_r($variable);
+                //Arrays asociativos
+                $usuarios= array('nombre'=>'Juan','Apellido'=>'Meneses','Cedula'=>1036953948);
+                echo '<h1>'.$usuarios['nombre'];
+                
+                
                 ?>
+                <pre>
             </h2>
         </p>
     </body>
