@@ -48,31 +48,87 @@ and open the template in the editor.
                 $variable=array('hi',3,'pol');   
             ?>
         </h1>
-        <p>
             <h2>     
                 <pre>
-                <?php
-                //Mostrar informacion de un arreglo de forma ordenada
-                echo'esta es otra seccion';
-                print_r($variable); 
-                echo '<br></br>';
-                //Agregar datos a un array
-                $variable[]='Phyton';
-                //Mostrar usando var_dump
-                var_dump($variable);
-                //Funciones para trabajo con arreglos
-                //quitar ultimo elemento de array
-                $dato= array_pop($variable);
-                echo '<br></br>';
-                print_r($variable);
-                //Arrays asociativos
-                $usuarios= array('nombre'=>'Juan','Apellido'=>'Meneses','Cedula'=>1036953948);
-                echo '<h1>'.$usuarios['nombre'];
-                
-                
-                ?>
-                <pre>
+                    <?php
+                    //Mostrar informacion de un arreglo de forma ordenada
+                    echo'esta es otra seccion';
+                    print_r($variable); 
+                    echo '<br></br>';
+                    //Agregar datos a un array
+                    $variable[]='Phyton';
+                    //Mostrar usando var_dump
+                    var_dump($variable);
+                    //Funciones para trabajo con arreglos
+                    //quitar ultimo elemento de array
+                    $dato= array_pop($variable);
+                    echo '<br></br>';
+                    print_r($variable);
+                    //Arrays asociativos
+                    $usuarios= array('nombre'=>'Juan','Apellido'=>'Meneses','Cedula'=>1036953948);
+                    echo '<h1>'.$usuarios['nombre'];
+                    //revisar si un valor existe en el arreglo
+                    $Existe= in_array('carlos', $usuarios);
+                    echo $Existe;
+
+                    ?>
+                   
+                    <ul>
+                        <?PHP
+                            foreach ($usuarios as $key => $user){
+                                echo "<li>" . $key . " " .$user . "</li>";
+                            }
+                            for($i = 0; $i<4; $i++){
+                                echo $i;
+                            }
+                            echo '<br>';
+                            $cont = 0;
+                            while($cont<5)
+                            {
+                                echo $cont;
+                                if($cont==3)
+                                {
+                                    break;
+                                }
+                                $cont++;
+                            }
+                        ?>
+                    </ul>
+                </pre>
             </h2>
-        </p>
+        <h1>
+            <?php
+            //Funciones en php
+            function saludar()
+            {
+                echo '<h2>'.'hi there'.'</h2>';
+            }
+            saludar();
+            //Funcion con parametros
+            function user ($name,$tel)
+            {
+                echo 'Nombre:'.$name;
+                echo 'Telefono:'.$tel;
+            }
+            user('Juan','3124800053');
+            //funciones que retornan
+            function sumar ($num1,$num2)
+            {
+                $sum=$num1+$num2;
+                return $sum;
+            }
+            sumar(2,3);
+            echo $sum;
+            //acceder a variables globales desde funcion
+            $agenda =array();
+            function agendar ($nombre)
+            {
+                global $agenda;
+               $agenda[]=$nombre;
+            }
+            agendar('felipe');
+            print_r($agenda)
+            ?>
+        </h1>
     </body>
 </html>
