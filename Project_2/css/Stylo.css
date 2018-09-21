@@ -1,0 +1,30 @@
+
+.stylo_footer
+{
+    
+}
+body
+{
+    background: linear-gradient(#512DA8,#009688);
+}
+.formulario
+{
+    margin-bottom:20px;
+    width: 70%
+}
+#hplogo
+{
+    text-align: center;
+    
+}
+#hplogoim
+{
+    border-radius:20px; 
+    border:0.6px dotted black;
+    box-shadow: 2px 2px darkblue;       
+}
+.btn
+{
+    background: black;  
+    width: 70%;
+}
