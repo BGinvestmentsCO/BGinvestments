@@ -25,7 +25,7 @@ and open the template in the editor.
         <section>
             <div class="container-fluid formulario">
                 <div id="hplogo">
-                    <img src="img/header.png" id="hplogoim">
+                    <img src="img/header1.png" id="hplogoim">
                 </div>
                 <form>
                     <div class="row my-2">
